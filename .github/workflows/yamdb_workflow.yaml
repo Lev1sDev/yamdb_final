@@ -63,7 +63,7 @@ jobs:
           script: |
             sudo docker lev1sdev/yamdb_final
             sudo docker-compose stop
-            sudo docker-compose rm web -f
+            sudo docker image prune -af
             # Создаст файл для переменных окружения
             touch .env
             # Наполнит файл переменными окружения из секретов GitHub
